@@ -1,0 +1,62 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Testing Google Home Page",
+    "line": 1,
+    "id": "testing-google-home-page",
+    "tags": [],
+    "uri": "google.feature",
+    "elements": [
+      {
+        "id": "testing-google-home-page;search-on-google",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Search on Google",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I visit Google Page",
+            "result": {
+              "status": "passed",
+              "duration": 2370000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter text",
+            "result": {
+              "status": "passed",
+              "duration": 593000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I click on Search",
+            "result": {
+              "status": "passed",
+              "duration": 3678000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should be redirected to next page",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

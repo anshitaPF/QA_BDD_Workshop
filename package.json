@@ -1,0 +1,36 @@
+{
+  "name": "qa_bdd_workshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "testing": "npx cypress run -e TAGS='@Workshop' --e2e --browser chrome --headless --record --key 0df979c1-fec2-4d90-a70e-2512386723a4",
+      "testManager": "npx cypress run -e TAGS='@Wallstreet'  --e2e --browser electron --headless --record"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshitaPF/QA_BDD_Workshop.git"
+  },
+  "author": "Anshita Bhasin <anshita@propertyfinder.ae>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anshitaPF/QA_BDD_Workshop/issues"
+  },
+  "homepage": "https://github.com/anshitaPF/QA_BDD_Workshop#readme",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^10.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "playwright-webkit": "^1.25.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "commonPath": "cypress/integration/step-definition/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
