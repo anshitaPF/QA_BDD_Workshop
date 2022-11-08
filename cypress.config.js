@@ -5,7 +5,7 @@ module.exports = defineConfig({
   CYPRESS_RECORD_KEY: '0df979c1-fec2-4d90-a70e-2512386723a4',
 
   e2e: {
-    baseUrl: "https://staging.propertyfinder.ae/manager",
+    baseUrl: "https://pfflex.mycrm.com/auth/sign-in",
     setupNodeEvents(on, config) {
       const cucumber = require('cypress-cucumber-preprocessor').default
       on('file:preprocessor', cucumber())

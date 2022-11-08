@@ -4,8 +4,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "testing": "npx cypress run -e TAGS='@Workshop' --e2e --browser chrome --headless --record --key 0df979c1-fec2-4d90-a70e-2512386723a4",
-      "testManager": "npx cypress run -e TAGS='@Wallstreet'  --e2e --browser electron --headless --record"
+    "cucumber-report": "node cucumber-html-report.js",
+    "delete-existingJsonReports": "rm -rf cypress/reports/cucumber-json/*.json",
+    "delete-reportFolder": "rm -rf cypress/reports/",
+    "testing": "npx cypress run -e TAGS='@Workshop' --e2e --browser chrome --headless --record --key 0df979c1-fec2-4d90-a70e-2512386723a4",
+    "TestWithReportGeneration": "npm run delete-reportFolder ;npm run testing ; npm run cucumber-report ; npm run delete-existingJsonReports"
+  
+
+
   },
   "repository": {
     "type": "git",
@@ -32,5 +38,8 @@
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
+  },
+  "dependencies": {
+    "multiple-cucumber-html-reporter": "^3.0.1"
   }
 }
